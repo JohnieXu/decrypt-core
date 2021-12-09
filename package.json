@@ -15,7 +15,13 @@
     "type": "git",
     "url": "git@github.com:JohnieXu/decrypt-core.git"
   },
-  "keywords": ["des", "3des", "encrypt", "decrypt", "data encrypt utils"],
+  "keywords": [
+    "des",
+    "3des",
+    "encrypt",
+    "decrypt",
+    "data encrypt utils"
+  ],
   "author": "JohnieXu",
   "license": "Apache-2.0",
   "files": [
