@@ -7,8 +7,8 @@
   "module": "./es/index",
   "scripts": {
     "lint": "eslint src --ext js --fix",
-    "test": "jest",
-    "test:coverage": "npx jest --silent --ci --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"",
+    "test": "npm run build && jest",
+    "test:coverage": "npm run build && npx jest --silent --ci --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"",
     "build": "father-build"
   },
   "repository": {
