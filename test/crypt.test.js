@@ -147,6 +147,9 @@ describe('encrypt worked', () => {
   it('crypt and decrypt with different key', () => {
     const base = '12345678901234567890'
     const appKeys = [
+      '', // 0
+      base.substring(0, 1), // 1
+      base.substring(0, 3), // 3
       base.substring(0, 6), // 6
       base.substring(0, 8), // 8
       (base + base).substring(0, 16), // 16
@@ -154,6 +157,7 @@ describe('encrypt worked', () => {
       (base + base + base + base + base).substring(0, 48), // 48
       new Array(10).fill(base).join(''), // 100
       new Array(100).fill(base).join(''), // 1000
+      new Array(1000).fill(base).join(''), // 10000
     ]
     const data = 'fool bar'
     appKeys.forEach((appKey) => {
@@ -180,5 +184,23 @@ describe('encrypt worked', () => {
       decrypted = decrypt(data, appKey)
     }).not.toThrowError()
     expect(decrypted).toEqual(expectData)
+  })
+
+  // 测试加密特殊字符
+  it('crypt adn decrypt the unregular words', () => {
+    const appKey = '12345678901234567890123456789012'
+    const datas = [
+      '😀😃😄😁😆😅🤣😂🙂🙃😉😊😇🥰😍🤩😘😗☺😚😙😋😛😜🤪😝🤑🤗', // https://unicode.org/emoji/charts/full-emoji-list.html#1f600
+      'U+1F600',
+    ]
+    datas.forEach((data) => {
+      let encrypted
+      let decrypted
+      expect(() => {
+        encrypted = encrypt(data, appKey)
+        decrypted = decrypt(encrypted, appKey)
+      }).not.toThrowError()
+      expect(decrypted).toEqual(data)
+    })
   })
 })
