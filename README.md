@@ -66,6 +66,142 @@
 - `test`-执行测试用例
 - `test:coverage`-统计测试覆盖率
 - `build`-使用[father](https://github.com/umijs/father)进行打包
+- `anaysis`-使用当前机器进行压缩比率、速率分析
+
+## 压缩率
+
+> `npm run anaysis`
+
+```json
+[
+  {
+    "length": "2byte",
+    "encLength": "64byte",
+    "time": "3ms",
+    "ratio": "3200.0000%",
+    "type": "英文"
+  },
+  {
+    "length": "100byte",
+    "encLength": "256byte",
+    "time": "4ms",
+    "ratio": "256.0000%",
+    "type": "英文"
+  },
+  {
+    "length": "1000byte",
+    "encLength": "2048byte",
+    "time": "11ms",
+    "ratio": "204.8000%",
+    "type": "英文"
+  },
+  {
+    "length": "10000byte",
+    "encLength": "20064byte",
+    "time": "64ms",
+    "ratio": "200.6400%",
+    "type": "英文"
+  },
+  {
+    "length": "50000byte",
+    "encLength": "100064byte",
+    "time": "244ms",
+    "ratio": "200.1280%",
+    "type": "英文"
+  },
+  {
+    "length": "100000byte",
+    "encLength": "200064byte",
+    "time": "516ms",
+    "ratio": "200.0640%",
+    "type": "英文"
+  },
+  {
+    "length": "3byte",
+    "encLength": "64byte",
+    "time": "13ms",
+    "ratio": "2133.3333%",
+    "type": "中文"
+  },
+  {
+    "length": "102byte",
+    "encLength": "192byte",
+    "time": "2ms",
+    "ratio": "188.2353%",
+    "type": "中文"
+  },
+  {
+    "length": "1002byte",
+    "encLength": "1408byte",
+    "time": "4ms",
+    "ratio": "140.5190%",
+    "type": "中文"
+  },
+  {
+    "length": "10002byte",
+    "encLength": "13408byte",
+    "time": "41ms",
+    "ratio": "134.0532%",
+    "type": "中文"
+  },
+  {
+    "length": "50001byte",
+    "encLength": "66720byte",
+    "time": "147ms",
+    "ratio": "133.4373%",
+    "type": "中文"
+  },
+  {
+    "length": "100002byte",
+    "encLength": "133408byte",
+    "time": "287ms",
+    "ratio": "133.4053%",
+    "type": "中文"
+  },
+  {
+    "length": "5byte",
+    "encLength": "160byte",
+    "time": "1ms",
+    "ratio": "3200.0000%",
+    "type": "中文混合"
+  },
+  {
+    "length": "100byte",
+    "encLength": "2048byte",
+    "time": "5ms",
+    "ratio": "2048.0000%",
+    "type": "中文混合"
+  },
+  {
+    "length": "1000byte",
+    "encLength": "20032byte",
+    "time": "53ms",
+    "ratio": "2003.2000%",
+    "type": "中文混合"
+  },
+  {
+    "length": "10000byte",
+    "encLength": "199904byte",
+    "time": "429ms",
+    "ratio": "1999.0400%",
+    "type": "中文混合"
+  },
+  {
+    "length": "50000byte",
+    "encLength": "999456byte",
+    "time": "2178ms",
+    "ratio": "1998.9120%",
+    "type": "中文混合"
+  },
+  {
+    "length": "100000byte",
+    "encLength": "1998848byte",
+    "time": "5132ms",
+    "ratio": "1998.8480%",
+    "type": "中文混合"
+  }
+]
+```
 
 ## 开源协议
 

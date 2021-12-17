@@ -11,7 +11,8 @@
     "lint": "eslint src --ext js --fix",
     "test": "npm run build && jest",
     "test:coverage": "npm run build && npx jest --silent --ci --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"",
-    "build": "father-build"
+    "build": "father-build",
+    "anaysis": "node script/compress_anaysis.js"
   },
   "repository": {
     "type": "git",
