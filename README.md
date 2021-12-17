@@ -205,4 +205,4 @@
 
 ## 开源协议
 
-APLv2 © [JohnieXu](https://github.com/JohnieXu)
+[MIT License](./LICENSE)
