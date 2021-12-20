@@ -74,6 +74,14 @@ function writeResult(result) {
   fs.writeFileSync(path.resolve('./README.md'), nreadme)
 }
 
+function getPramsWrite() {
+  const args = process.argv.slice(2)
+  if (!args || args.length < 1) {
+    return false
+  }
+  return ['-w', '--write'].includes(args[0]);
+}
+
 function start() {
   const typeMap = {
     2: '英文',
@@ -136,7 +144,9 @@ function start() {
     console.log(`${i + 1} DONE\n`)
   }
   console.log(result)
-  writeResult(result)
+  if (getPramsWrite()) {
+    writeResult(result)
+  }
 }
 
 start()
