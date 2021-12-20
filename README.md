@@ -66,8 +66,8 @@
 - `test`-执行测试用例
 - `test:coverage`-统计测试覆盖率
 - `build`-使用[father](https://github.com/umijs/father)进行打包
-- `anaysis`-使用当前机器进行压缩比率、速率分析
-- `anaysis:write`-使用当前机器进行压缩比率、速率分析并写入结果到 README.md（需要先将此文件中已有结果删除并用占位符`<--anaysis-->`代替）
+- `anaysis`-使用当前机器进行加密比率、速率分析
+- `anaysis:write`-使用当前机器进行加密比率、速率分析并写入结果到 README.md（需要先将此文件中已有结果删除并用占位符`<--anaysis-->`代替）
 
 ## 压缩率
 
