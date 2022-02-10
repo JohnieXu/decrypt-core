@@ -59,6 +59,7 @@
 ## 相关项目
 
 - CLI命令行工具-[xtjk-decrypt](https://github.com/JohnieXu/xtjk-decrypt)
+- Chrome插件-[xtjk-decrypt-chrome](https://github.com/JohnieXu/xtjk-decrypt-chrome)
 
 ## NPM脚本
 
