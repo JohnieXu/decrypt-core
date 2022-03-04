@@ -69,6 +69,7 @@ isEncryptedData('93468187855434817844048812694314B1382F05951542D6B98311D90CD0B97
 ## 相关项目
 
 - CLI命令行工具-[xtjk-decrypt](https://github.com/JohnieXu/xtjk-decrypt)
+- Chrome插件-[xtjk-decrypt-chrome](https://github.com/JohnieXu/xtjk-decrypt-chrome)
 
 ## NPM脚本
 
