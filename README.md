@@ -46,7 +46,7 @@
   > 使用`script`标签引入`dist/index.umd.min.js`文件后，模块导出的全局变量在`window.decryptCore` 上
 
   ```html
-  <script src="https://unpkg.com/decrypt-core@1.0.0/dist/index.umd.min.js"></script>
+  <script src="https://unpkg.com/decrypt-core@latest/dist/index.umd.min.js"></script>
   <script>
     var key = '15e89af5da164202a4f839a2f1e7320a'
     const data = '{"page":1,"size":10}'
@@ -55,6 +55,16 @@
     console.log(`加密后数据：${encData}\n解密后数据：${decData}`)
   </script>
   ```
+
+全局同时还暴露了工具方法 `isEncryptedData` ，可用于检查数据是否是数据加密方法 `encrypt` 返回的数据格式
+
+```js
+import { isEncryptedData } from 'decrypt-core'
+
+isEncryptedData('123445) // false 不是加密数据格式
+
+isEncryptedData('93468187855434817844048812694314B1382F05951542D6B98311D90CD0B97E22E6D052DE6A9B83381E97E8B23AC5209F8D4E6428C697EAEFEB495FCF7673E48E4D7087A2B24CEAFE127793421DAB91FCD411D04B85BCC5427DB76E6D3353BE8897BE1DAE3D28DBDF053D7707BACF0AC77CCF0426BA8F76E9FC578D8D91803289F53AD66A70AF73B0756B97F314D33997191E8E976EDFAFA46A75CC393A88B1') // true 是加密数据格式
+```
 
 ## 相关项目
 

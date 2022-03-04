@@ -30,6 +30,12 @@ declare module "decrypt-core/es/util" {
    * @param str 字符串
    */
   export function stringToByte(str: string): number[]
+  /**
+  * 校验数据是否符合已加密数据的格式要求
+  * @param {any} data 待校验的数据
+  * @returns Boolean 是否符合加密数据格式要求
+  */
+  export function isEncryptedData(data: any): boolean
 }
 
 declare module "decrypt-core/lib/util" {
@@ -64,4 +70,10 @@ declare module "decrypt-core/lib/util" {
     * @param str 字符串
     */
    export function stringToByte(str: string): number[]
+   /**
+   * 校验数据是否符合已加密数据的格式要求
+   * @param {any} data 待校验的数据
+   * @returns Boolean 是否符合加密数据格式要求
+   */
+   export function isEncryptedData(data: any): boolean
 }

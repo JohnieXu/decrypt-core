@@ -140,3 +140,13 @@ export function hexDecode(str) {
 
   return back
 }
+
+/**
+ * 校验数据是否符合已加密数据的格式要求
+ * @param {any} data 待校验的数据
+ * @returns Boolean 是否符合加密数据格式要求
+ */
+export function isEncryptedData(data) {
+  const reg = /^[A-Z\d]+$/
+  return !(typeof data !== 'string' || data.length < 32 || !reg.test(data))
+}
