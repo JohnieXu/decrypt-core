@@ -2,7 +2,12 @@
 // https://segmentfault.com/a/1190000009247663
 
 declare namespace decryptCore {
-  type DataType = number | string | null | boolean | object | DataType[]
+  interface BaseObject {
+    [key: string]: any
+    [key: number]: any
+  }
+  type BaseData = number | string | null | boolean | BaseObject
+  type DataType = BaseData | Array<BaseData>
   
   /**
    * 加密
