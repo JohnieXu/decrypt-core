@@ -1,6 +1,6 @@
 {
   "name": "decrypt-core",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "The core library for data encrypt and decrypt based on Triple Data Encryption Algorithm(3DES).基于 3DES 算法的数据加解密核心库",
   "main": "./lib/index",
