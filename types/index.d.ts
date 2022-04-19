@@ -10,14 +10,14 @@ declare namespace decryptCore {
   type DataType = BaseData | Array<BaseData>
   
   /**
-   * 加密
-   * @param data 待加密数据
+   * 解密
+   * @param data 待解密数据
    * @param key 秘钥
    */
   function decrypt<T extends DataType>(data: T, key: string): T
   /**
-   * 解密
-   * @param data 待解密数据
+   * 加密
+   * @param data 待加密数据
    * @param key 秘钥
    */
   function encrypt<T extends DataType>(data: T, key: string): T
