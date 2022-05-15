@@ -45,7 +45,7 @@ function genRandomString(length, type = '0') {
       length += (3 - r)
     }
     return {
-      result: pick(length / 3, enDicts).join(''),
+      result: pick(length / 3, zhDicts).join(''),
       length,
     }
   }
@@ -86,7 +86,7 @@ function start() {
   const typeMap = {
     2: '英文',
     1: '中文',
-    0: '中文混合',
+    0: '中英混合',
   }
   const lens = [
     [1, '2'], // 1byte
