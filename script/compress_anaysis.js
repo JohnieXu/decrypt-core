@@ -69,7 +69,7 @@ function genRandomString(length, type = '0') {
 }
 
 function writeResult(result) {
-  const readme = fs.readFileSync(path.resolve('./README.md'), 'utf-8')
+  const readme = fs.readFileSync(path.resolve('./templates/README.tpl'), 'utf-8')
   const nreadme = readme.replace('<--anaysis-->', JSON.stringify(result, null, 2))
   fs.writeFileSync(path.resolve('./README.md'), nreadme)
 }

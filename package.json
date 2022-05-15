@@ -12,7 +12,8 @@
     "test": "npm run build && jest",
     "test:coverage": "npm run build && npx jest --silent --ci --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"",
     "build": "father-build",
-    "anaysis": "node script/compress_anaysis.js"
+    "anaysis": "node script/compress_anaysis.js",
+    "anaysis:write": "node script/compress_anaysis.js -w"
   },
   "repository": {
     "type": "git",
