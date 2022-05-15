@@ -79,7 +79,7 @@ isEncryptedData('93468187855434817844048812694314B1382F05951542D6B98311D90CD0B97
 - `test:coverage`-统计测试覆盖率
 - `build`-使用[father](https://github.com/umijs/father)进行打包
 - `anaysis`-使用当前机器进行加密比率、速率分析
-- `anaysis:write`-使用当前机器进行加密比率、速率分析并写入结果到 README.md（需要先将此文件中已有结果删除并用占位符`<--anaysis-->`代替）
+- `anaysis:write`-使用当前机器进行加密比率、速率分析并写入结果到 README.md
 
 ## 压缩率
 
@@ -90,85 +90,85 @@ isEncryptedData('93468187855434817844048812694314B1382F05951542D6B98311D90CD0B97
   {
     "length": "2byte",
     "encLength": "64byte",
-    "time": "3ms",
+    "time": "4ms",
     "ratio": "3200.0000%",
     "type": "英文"
   },
   {
     "length": "100byte",
     "encLength": "256byte",
-    "time": "4ms",
+    "time": "5ms",
     "ratio": "256.0000%",
     "type": "英文"
   },
   {
     "length": "1000byte",
     "encLength": "2048byte",
-    "time": "11ms",
+    "time": "10ms",
     "ratio": "204.8000%",
     "type": "英文"
   },
   {
     "length": "10000byte",
     "encLength": "20064byte",
-    "time": "64ms",
+    "time": "101ms",
     "ratio": "200.6400%",
     "type": "英文"
   },
   {
     "length": "50000byte",
     "encLength": "100064byte",
-    "time": "244ms",
+    "time": "283ms",
     "ratio": "200.1280%",
     "type": "英文"
   },
   {
     "length": "100000byte",
     "encLength": "200064byte",
-    "time": "516ms",
+    "time": "510ms",
     "ratio": "200.0640%",
     "type": "英文"
   },
   {
     "length": "3byte",
     "encLength": "64byte",
-    "time": "13ms",
+    "time": "11ms",
     "ratio": "2133.3333%",
     "type": "中文"
   },
   {
     "length": "102byte",
-    "encLength": "192byte",
+    "encLength": "480byte",
     "time": "2ms",
-    "ratio": "188.2353%",
+    "ratio": "470.5882%",
     "type": "中文"
   },
   {
     "length": "1002byte",
-    "encLength": "1408byte",
-    "time": "4ms",
-    "ratio": "140.5190%",
+    "encLength": "4064byte",
+    "time": "13ms",
+    "ratio": "405.5888%",
     "type": "中文"
   },
   {
     "length": "10002byte",
-    "encLength": "13408byte",
-    "time": "41ms",
-    "ratio": "134.0532%",
+    "encLength": "40000byte",
+    "time": "115ms",
+    "ratio": "399.9200%",
     "type": "中文"
   },
   {
     "length": "50001byte",
-    "encLength": "66720byte",
-    "time": "147ms",
-    "ratio": "133.4373%",
+    "encLength": "199712byte",
+    "time": "479ms",
+    "ratio": "399.4160%",
     "type": "中文"
   },
   {
     "length": "100002byte",
-    "encLength": "133408byte",
-    "time": "287ms",
-    "ratio": "133.4053%",
+    "encLength": "399296byte",
+    "time": "922ms",
+    "ratio": "399.2880%",
     "type": "中文"
   },
   {
@@ -176,42 +176,42 @@ isEncryptedData('93468187855434817844048812694314B1382F05951542D6B98311D90CD0B97
     "encLength": "160byte",
     "time": "1ms",
     "ratio": "3200.0000%",
-    "type": "中文混合"
+    "type": "中英混合"
   },
   {
     "length": "100byte",
     "encLength": "2048byte",
     "time": "5ms",
     "ratio": "2048.0000%",
-    "type": "中文混合"
+    "type": "中英混合"
   },
   {
     "length": "1000byte",
     "encLength": "20032byte",
-    "time": "53ms",
+    "time": "55ms",
     "ratio": "2003.2000%",
-    "type": "中文混合"
+    "type": "中英混合"
   },
   {
     "length": "10000byte",
-    "encLength": "199904byte",
-    "time": "429ms",
-    "ratio": "1999.0400%",
-    "type": "中文混合"
+    "encLength": "199968byte",
+    "time": "502ms",
+    "ratio": "1999.6800%",
+    "type": "中英混合"
   },
   {
     "length": "50000byte",
-    "encLength": "999456byte",
-    "time": "2178ms",
-    "ratio": "1998.9120%",
-    "type": "中文混合"
+    "encLength": "999392byte",
+    "time": "2669ms",
+    "ratio": "1998.7840%",
+    "type": "中英混合"
   },
   {
     "length": "100000byte",
-    "encLength": "1998848byte",
-    "time": "5132ms",
-    "ratio": "1998.8480%",
-    "type": "中文混合"
+    "encLength": "1998720byte",
+    "time": "4953ms",
+    "ratio": "1998.7200%",
+    "type": "中英混合"
   }
 ]
 ```
