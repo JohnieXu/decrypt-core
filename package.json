@@ -6,12 +6,16 @@
   "main": "./lib/index",
   "module": "./es/index",
   "browser": "./dist/index.umd.js",
+  "miniprogram": "miniprogram_dist",
   "typings": "./types/index.d.ts",
   "scripts": {
     "lint": "eslint src --ext js --fix",
     "test": "npm run build && jest",
     "test:coverage": "npm run build && npx jest --silent --ci --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"",
-    "build": "father-build",
+    "build": "npm run clean && father-build && npm run build:miniprogram",
+    "clean": "rm -rf dist es lib miniprogram_dist",
+    "copy": "node ./script/build_miniprogram.js",
+    "build:miniprogram": "npm run copy; babel --config-file ./.babel.config.js --out-dir miniprogram_dist lib",
     "anaysis": "node script/compress_anaysis.js",
     "anaysis:write": "node script/compress_anaysis.js -w"
   },
@@ -45,10 +49,14 @@
     "crypto-js": "3.1.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "father-build": "^1.20.4",
+    "fs-extra": "^10.1.0",
     "husky": "^4.3.0",
     "jest": "^26.6.3"
   }
