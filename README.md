@@ -9,13 +9,15 @@
 
 ## 特性
 
-- 使用简单-提供加密解密函数
+- 使用简单-提供加密、解密、签名函数
 - 稳定性高-公司真实项目接入使用
-- 支持多环境-支持Node.js、web浏览器、各种小程序、RN及weex跨平台框架
+- 支持多环境-支持 Node.js、web 浏览器、各种小程序、RN 及 weex 跨平台框架
 
 ## 使用
 
-全局暴露两个核心方法`encrypt`和`decrypt`，引入项目后直接使用即可
+### 数据加解密
+
+全局对外提供了两个核心方法 `encrypt` 和 `decrypt`，引入项目后直接使用即可
 
 - ESM使用
   
@@ -56,7 +58,9 @@
   </script>
   ```
 
-全局同时还暴露了工具方法 `isEncryptedData` ，可用于检查数据是否是数据加密方法 `encrypt` 返回的数据格式
+### 校验加密数据格式
+
+全局对外提供了工具方法 `isEncryptedData` ，可用于检查数据是否是数据加密方法 `encrypt` 返回的数据格式
 
 ```js
 import { isEncryptedData } from 'decrypt-core'
@@ -64,6 +68,25 @@ import { isEncryptedData } from 'decrypt-core'
 isEncryptedData('123445') // false 不是加密数据格式
 
 isEncryptedData('93468187855434817844048812694314B1382F05951542D6B98311D90CD0B97E22E6D052DE6A9B83381E97E8B23AC5209F8D4E6428C697EAEFEB495FCF7673E48E4D7087A2B24CEAFE127793421DAB91FCD411D04B85BCC5427DB76E6D3353BE8897BE1DAE3D28DBDF053D7707BACF0AC77CCF0426BA8F76E9FC578D8D91803289F53AD66A70AF73B0756B97F314D33997191E8E976EDFAFA46A75CC393A88B1') // true 是加密数据格式
+```
+
+### 加签验签
+
+> v1.1.5 及以上版本支持
+
+全局对外提供两个签名相关方法 `createSign` 和 `verifySign`，可用于对数据进行加签、验签
+
+```js
+import { createSign, verifySign } from 'decrypt-core'
+const data = { page: 1, size: 10 }
+const key = '15e89af5da164202a4f839a2f1e7320a'
+const sign = createSign(data, key) // 返回签名字符串
+const dataSigned1 = { ...data, sign: 'aaaa' }
+const dataSigned2 = { ...data, sign }
+const verified1 = verifySign(data, key) // 报错：signature field not found
+const verified2 = verifySign(dataSigned1, key) // verified2 === false 验签未通过
+const verified3 = verifySign(dataSigned2, key) // verified2 === true 验签通过
+
 ```
 
 ## 相关项目
