@@ -150,6 +150,7 @@ export function resolveContent(actionInfo, appkey) {
   try {
     res = JSON.parse(actionInfoString)
   } catch (e) {
+    /* istanbul ignore next */
     res = actionInfoString
   }
   // console.log('parse json:'+json)

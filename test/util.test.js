@@ -1,5 +1,6 @@
 const { isEncryptedData } = require('../lib/util')
 const { isEncryptedData: isEncryptedData2 } = require('../lib')
+const { byteToString, stringToByte } = require('../lib/util')
 
 // isEncryptedData功能正常
 describe('isEncryptedData worked successfully', () => {
@@ -70,5 +71,22 @@ describe('isEncryptedData should be exported by entrypoint', () => {
       }).not.toThrowError()
       expect(isEncryptedData2(data)).toStrictEqual(true)
     })
+  })
+})
+
+describe('util', () => {
+  it('byteToString worked with stringToByte', () => {
+    const str = 'hello world'
+    let byte
+    let str2
+    expect(() => {
+      byte = stringToByte(str)
+      str2 = byteToString(byte)
+    }).not.toThrowError()
+    expect(str).toBe(str2)
+  })
+  it('byteToString', () => {
+    const str = 'hello world'
+    expect(byteToString(str)).toBe(str)
   })
 })

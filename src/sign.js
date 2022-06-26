@@ -31,6 +31,7 @@ function sortParams(params) {
   for (let index = 0; index < sortKeys.length; index++) {
     const key = sortKeys[index]
     const value = params[key]
+    /* istanbul ignore if */
     if (!isBlank(value)) {
       if (typeof value === 'string') {
         sortedParams[key] = value.replace(' ', '')

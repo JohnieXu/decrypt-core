@@ -100,6 +100,7 @@ const verified3 = verifySign(dataSigned2, key) // verified2 === true 验签通�
 - `lint`-代码格式检查
 - `test`-执行测试用例
 - `test:coverage`-统计测试覆盖率
+- `coverage`-统计测试覆盖率并在 coverage 目录生成结果详情
 - `build`-使用[father](https://github.com/umijs/father)进行打包
 - `anaysis`-使用当前机器进行加密比率、速率分析
 - `anaysis:write`-使用当前机器进行加密比率、速率分析并写入结果到 README.md

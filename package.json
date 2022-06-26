@@ -12,6 +12,7 @@
     "lint": "eslint src --ext js --fix",
     "test": "npm run build && jest",
     "test:coverage": "npm run build && npx jest --silent --ci --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"",
+    "coverage": "npm run build && npx jest --coverage",
     "build": "npm run clean && father-build && npm run build:miniprogram",
     "clean": "rm -rf dist es lib miniprogram_dist",
     "copy": "node ./script/build_miniprogram.js",
