@@ -83,9 +83,9 @@ const key = '15e89af5da164202a4f839a2f1e7320a'
 const sign = createSign(data, key) // 返回签名字符串
 const dataSigned1 = { ...data, sign: 'aaaa' }
 const dataSigned2 = { ...data, sign }
-const verified1 = verifySign(data, key) // 报错：signature field not found
-const verified2 = verifySign(dataSigned1, key) // verified2 === false 验签未通过
-const verified3 = verifySign(dataSigned2, key) // verified2 === true 验签通过
+verifySign(data, key) // 报错：signature field not found
+verifySign(dataSigned1, key) // false 验签未通过
+verifySign(dataSigned2, key) // true 验签通过
 
 ```
 

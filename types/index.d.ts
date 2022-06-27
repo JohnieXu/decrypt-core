@@ -27,6 +27,22 @@ declare namespace decryptCore {
   * @returns Boolean 是否符合加密数据格式要求
   */
   function isEncryptedData(data: any): boolean
+  /**
+   * 加签
+   * @param data 待加签数据
+   * @param key 秘钥
+   */
+  function createSign(data: BaseObject, key: string): string
+  /**
+   * 验签
+   * @param data 带有签名的数据对象
+   * @param key 秘钥
+   * @param options 配置项
+   * @param options.signKey 数据对象中签名字段的 key
+   */
+  function verifySign(data: BaseObject, key: string, options?: {
+    signKey: string = 'sign'
+  }): boolean
 }
 
 declare module "decrypt-core" {
