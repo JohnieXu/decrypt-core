@@ -72,7 +72,7 @@ export function createSign(data, appKey) {
  * @param {Object} data 请求数据对象
  * @param {string} appKey 加密秘钥
  * @param {Object} options
- * @param {string} options.signKey default: 'sign
+ * @param {string} options.signKey default: 'sign'
  * @return {boolean} isVerified
  */
 export function verifySign(data, appKey, {
