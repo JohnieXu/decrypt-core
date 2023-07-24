@@ -41,7 +41,7 @@ declare namespace decryptCore {
    * @param options.signKey 数据对象中签名字段的 key
    */
   function verifySign(data: BaseObject, key: string, options?: {
-    signKey: string = 'sign'
+    signKey?: string
   }): boolean
 }
 
