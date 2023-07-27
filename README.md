@@ -1,11 +1,15 @@
 # decrypt-core
 
+<div align="center">
+
 [![NPM version][npm-image]][npm-url] [![NPM downloads](https://img.shields.io/npm/dm/decrypt-core)](https://www.npmjs.com/package/decrypt-core) 
 
 [npm-image]: https://img.shields.io/npm/v/decrypt-core
 [npm-url]: https://www.npmjs.com/package/decrypt-core
 
 基于 3DES 算法的数据加解密核心库
+
+</div>
 
 ## 特性
 
