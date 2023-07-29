@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/JohnieXu/decrypt-core/compare/v1.2.1...v1.2.2) (2023-07-29)
+
+
+### Bug Fixes
+
+* [#5](https://github.com/JohnieXu/decrypt-core/issues/5) ([#6](https://github.com/JohnieXu/decrypt-core/issues/6)) ([dbc2504](https://github.com/JohnieXu/decrypt-core/commit/dbc2504404c0caeb549c066a92c577f86e528bb8))
+
+
+
 # [1.2.0](https://github.com/JohnieXu/decrypt-core/compare/v1.1.4...v1.2.0) (2022-06-23)
 
 
