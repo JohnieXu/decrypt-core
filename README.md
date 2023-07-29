@@ -258,7 +258,7 @@ verifySign(dataSigned2, key) // true 验签通过
 
 详细版（手动）：
 
-1. 修改代码并测试通过 `npm test`
+1. 修改代码并执行测试 `npm test`
 2. commit 代码 `git commit -m "..."`
 3. 修改 `package.json` 版本号
 4. 生成变更记录 `npm run changelog`
@@ -268,12 +268,11 @@ verifySign(dataSigned2, key) // true 验签通过
 8. 构建项目 `npm run build` 
 9. 发布 npm 包 `npm publish`
     
-简洁版（自动）：
+简洁版（自动）：***推荐使用**
 
-1. 修改代码并测试通过 `npm test`
-2. 更新版本号、生成变更记录、创建 Tag `npm version <patch | minor | major>`
+1. 修改代码并执行测试 `npm test`
+2. 更新版本号、生成变更记录、创建 Tag `npm version <patch | minor | major>`，例如：`npm version patch`
 3. 推送 Tag `git push origin master --tags`
-4. 构建项目 `npm run build` 
-5. 发布 npm 包 `npm publish`
+4. 在 github 仓库中[创建一个 Release](https://github.com/JohnieXu/decrypt-core/releases/new)，然后 [Action](https://github.com/JohnieXu/decrypt-core/actions/workflows/node.js.cd.yml) 会自动发布 npm 包
 
 变更记录生成请参考：[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli#readme)
