@@ -19,6 +19,8 @@
 
 ## 使用
 
+[这里](./CHANGELOG.md)可以查看变更记录
+
 ### 数据加解密
 
 全局对外提供了两个核心方法 `encrypt` 和 `decrypt`，引入项目后直接使用即可
@@ -252,7 +254,9 @@ verifySign(dataSigned2, key) // true 验签通过
 
 ### PR
 
-### 发包流程
+### 发包工作流
+
+详细版（手动）：
 
 1. 修改代码并测试通过 `npm test`
 2. commit 代码 `git commit -m "..."`
@@ -263,5 +267,13 @@ verifySign(dataSigned2, key) // true 验签通过
 7. 推送 Tag `git push origin master --tags`
 8. 构建项目 `npm run build` 
 9. 发布 npm 包 `npm publish`
+    
+简洁版（自动）：
+
+1. 修改代码并测试通过 `npm test`
+2. 更新版本号、生成变更记录、创建 Tag `npm version <patch | minor | major>`
+3. 推送 Tag `git push origin master --tags`
+4. 构建项目 `npm run build` 
+5. 发布 npm 包 `npm publish`
 
 变更记录生成请参考：[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli#readme)
