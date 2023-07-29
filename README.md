@@ -247,3 +247,21 @@ verifySign(dataSigned2, key) // true 验签通过
 ## 开源协议
 
 [MIT License](./LICENSE)
+
+## 参与贡献
+
+### PR
+
+### 发包流程
+
+1. 修改代码并测试通过 `npm test`
+2. commit 代码 `git commit -m "..."`
+3. 修改 `package.json` 版本号
+4. 生成变更记录 `npm run changelog`
+5. commit `package.json` 和 `CHANGELOG.md` 文件
+6. 创建 Tag `git tag xxx`
+7. 推送 Tag `git push origin master --tags`
+8. 构建项目 `npm run build` 
+9. 发布 npm 包 `npm publish`
+
+变更记录生成请参考：[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli#readme)

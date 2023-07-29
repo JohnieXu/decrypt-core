@@ -19,7 +19,8 @@
     "build:miniprogram": "cross-env npm run copy && babel --config-file ./.babel.config.js --out-dir miniprogram_dist lib",
     "anaysis": "node script/compress_anaysis.js",
     "anaysis:write": "node script/compress_anaysis.js -w",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "version": "npm run changelog && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
