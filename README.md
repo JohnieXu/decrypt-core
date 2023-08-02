@@ -7,7 +7,7 @@
 [npm-image]: https://img.shields.io/npm/v/decrypt-core
 [npm-url]: https://www.npmjs.com/package/decrypt-core
 
-一个对 CryptoJS 中 [TDEA(Triple DES)](https://zh.wikipedia.org/wiki/3DES) 算法的简单包装的，更简洁更易于使用
+一个对 [crypto-js](https://github.com/brix/crypto-js) 中 [TDEA(Triple DES)](https://zh.wikipedia.org/wiki/3DES) 算法的简单包装，更简洁更易于使用，支持环境更丰富
 
 </div>
 
