@@ -7,7 +7,7 @@
 [npm-image]: https://img.shields.io/npm/v/decrypt-core
 [npm-url]: https://www.npmjs.com/package/decrypt-core
 
-基于 3DES 算法的数据加解密核心库
+一个对 CryptoJS 中 [TDEA(Triple DES)](https://zh.wikipedia.org/wiki/3DES) 算法的简单包装的，更简洁更易于使用
 
 </div>
 
