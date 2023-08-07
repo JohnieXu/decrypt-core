@@ -19,7 +19,7 @@
 
 ## 使用
 
-[这里](./CHANGELOG.md)可以查看变更记录
+各版本变更记录在 [CHANGELOG.md](./CHANGELOG.md) 中
 
 ### 数据加解密
 
@@ -113,7 +113,10 @@ verifySign(dataSigned2, key) // true 验签通过
 
 ## 压缩率
 
-> `npm run anaysis`
+> `npm run anaysis` 
+
+<details>
+  <summary>点击查看压缩率明细</summary>
 
 ```json
 [
@@ -245,6 +248,8 @@ verifySign(dataSigned2, key) // true 验签通过
   }
 ]
 ```
+</details>
+
 
 ## 开源协议
 
