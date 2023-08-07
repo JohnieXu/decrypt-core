@@ -2,7 +2,7 @@
   "name": "decrypt-core",
   "version": "1.2.2",
   "private": false,
-  "description": "The core library for data encrypt and decrypt based on Triple Data Encryption Algorithm(3DES).基于 3DES 算法的数据加解密核心库",
+  "description": "A simple wrapper for the TDEA (Triple DES) algorithm in crypto-js, which is more concise and easier to use, with support for a wider range of environments. 一个对 crypto-js 中 TDEA(Triple DES) 算法的简单包装，更简洁更易于使用，支持环境更丰富",
   "main": "./lib/index",
   "module": "./es/index",
   "browser": "./dist/index.umd.js",
@@ -29,9 +29,11 @@
   "keywords": [
     "des",
     "3des",
+    "tdea",
+    "triple-des",
+    "triple-dea",
     "encrypt",
     "decrypt",
-    "data encrypt utils"
   ],
   "author": "JohnieXu",
   "license": "MIT",
